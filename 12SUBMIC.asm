@@ -1,0 +1,10 @@
+MOV R0, #00
+MOV A, r1 ;input1
+CLR C
+SUBB A, r2 ;input2
+JNC LABEL
+INC R0
+CPL A
+ADD A,#01
+LABEL: MOV r4, a
+HERE: SJMP HERE
